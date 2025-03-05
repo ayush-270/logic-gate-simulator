@@ -1,7 +1,13 @@
 import React from "react";
 import "./JoystickControls.css";
+import switchSound from "../components/sound/switch.mp3"; // Add sound file
 
 const JoystickControls = ({ inputs, onToggle }) => {
+  const playSound = () => {
+    const audio = new Audio(switchSound);
+    audio.play();
+  };
+
   return (
     <div className="joystick-container">
       <h3>Input Controls:</h3>
@@ -11,7 +17,10 @@ const JoystickControls = ({ inputs, onToggle }) => {
             <input
               type="checkbox"
               checked={value}
-              onChange={() => onToggle(index)}
+              onChange={() => {
+                onToggle(index);
+                playSound();
+              }}
             />
             <span className="slider round"></span>
           </label>
