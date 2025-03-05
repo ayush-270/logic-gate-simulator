@@ -135,6 +135,7 @@ button {
 button:hover {
   background: linear-gradient(45deg, #4CAF50, #00e5ff);
   transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
 }
 
 /* Dropdown (Gate Selector) */
@@ -157,4 +158,68 @@ select:hover {
 .led.on {
   background-color: #00e5ff;
   box-shadow: 0 0 25px #00e5ff;
+}
+
+/* Ensure all content is centered properly */
+.app-container {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Improve layout for mobile and desktop */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Make sure the gate selector is centered */
+.gate-selector {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Adjust truth table images */
+.truth-table img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.2);
+}
+
+/* Improve input switch alignment */
+.joystick-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Ensure responsive layout */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    text-align: center;
+  }
+
+  .truth-table img {
+    max-width: 90%;
+  }
 }

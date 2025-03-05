@@ -3,6 +3,7 @@
     margin-top: 20px;
 }
 
+/* Base LED Style */
 .led {
     width: 50px;
     height: 50px;
@@ -12,14 +13,30 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* When output is ON (1) */
+/* When output is ON (1) - Pulsing Effect */
 .led.on {
-    background-color: #4CAF50;
-    box-shadow: 0 0 20px #4CAF50;
+    background-color: #00e5ff;
+    box-shadow: 0 0 20px #00e5ff;
+    animation: pulse 1.5s infinite alternate ease-in-out;
 }
 
 /* When output is OFF (0) */
 .led.off {
-    background-color: #aaa;
+    background-color: #444;
     box-shadow: none;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #00e5ff;
+    }
+
+    50% {
+        box-shadow: 0 0 25px #00e5ff, 0 0 35px #00e5ff;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #00e5ff;
+    }
 }
