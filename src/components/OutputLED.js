@@ -1,17 +1,11 @@
 import React from "react";
+import "./OutputLED.css";
 
 const OutputLED = ({ output }) => {
   return (
-    <div>
-      <p>Output:</p>
-      <div
-        style={{
-          width: "50px",
-          height: "50px",
-          borderRadius: "50%",
-          backgroundColor: output ? "green" : "red",
-        }}
-      />
+    <div className="output-container">
+      <h3>Output:</h3>
+      <div className={`led ${output ? "on" : "off"}`}></div>
     </div>
   );
 };

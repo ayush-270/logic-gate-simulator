@@ -1,38 +1,89 @@
-.App {
+/* Dark Mode Theme */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Centered main content */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+h1,
+h3 {
+  color: #ffffff;
+}
+
+/* Dark mode for dropdown */
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  cursor: pointer;
+  background-color: #333;
   color: white;
+  transition: 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+select:hover {
+  border-color: #4CAF50;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Panels */
+.left-panel,
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .joystick-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .gate-selector {
+    width: 90%;
+  }
+
+  .output-container {
+    margin-top: 15px;
+  }
+
+  select {
+    width: 100%;
   }
 }

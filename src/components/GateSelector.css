@@ -1,0 +1,17 @@
+.gate-selector {
+    text-align: center;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: white;
+    transition: 0.2s;
+}
+
+select:hover {
+    border-color: #4CAF50;
+}
