@@ -87,3 +87,74 @@ select:hover {
     width: 100%;
   }
 }
+
+/* Neon Glow Effect */
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff;
+  }
+
+  50% {
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff, 0 0 30px #00e5ff;
+  }
+
+  100% {
+    text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff;
+  }
+}
+
+/* Apply Neon Effect to Headings */
+h1,
+h3 {
+  color: #00e5ff;
+  animation: neon-glow 1.5s infinite alternate;
+}
+
+/* Container Styling */
+.app-container {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button Style */
+button {
+  background: linear-gradient(45deg, #00e5ff, #4CAF50);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #4CAF50, #00e5ff);
+  transform: scale(1.1);
+}
+
+/* Dropdown (Gate Selector) */
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #00e5ff;
+  cursor: pointer;
+  background-color: #222;
+  color: #00e5ff;
+  transition: 0.3s;
+}
+
+select:hover {
+  border-color: #4CAF50;
+}
+
+/* Output LED */
+.led.on {
+  background-color: #00e5ff;
+  box-shadow: 0 0 25px #00e5ff;
+}
